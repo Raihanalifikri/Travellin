@@ -1,0 +1,490 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 15px;
+}
+html {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.layar-dalam {
+    width: 1000px;
+    margin: auto;
+}
+.layar-penuh{
+    width: 100%;
+
+}
+nav {
+    z-index: 1000;
+    color: white;
+    text-align: center;
+    position: fixed;
+    border-bottom: 1px solid #b1b1b1;
+    line-height: 60px;
+    width: 100%;
+    transition: background-color 0.8s ease;
+}
+nav.putih {
+    background-color: #fff;
+}
+nav .logo {
+    float: left;
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+}
+nav .logo img {
+    vertical-align: middle;
+    width: 120px;
+}
+
+nav .menu {
+    float: right;
+    height: 60px;
+    max-width: 600px;
+}
+
+nav .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav .menu ul li {
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 0px 16px 0px 16px;
+    transition: 1s;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+/* Pengaturan header */
+header{
+    position: relative;
+    height: 100Vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+header {
+    background-image: url(asset/Indonesia.png);
+    background-size: cover;
+}
+
+
+header .intro {
+    z-index: 100;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    margin-bottom:10px;
+}
+
+header .intro h3 {
+    font-size: 50px;
+    margin-bottom:20px;
+    padding: 0;
+}
+header .intro p {
+    margin-bottom: 10px;
+}
+.tombol {
+    background-color: #b1b1b1;
+    height: 40px;
+    line-height: 42px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px;
+    font-size: 15px;
+    border-radius: 4px;
+    transition: .5s; 
+}
+.tombol:hover {
+    background-color: white;
+    color: black;
+}
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 50%;
+    z-index: -1;
+}
+.tombol-menu {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.tombol-menu .garis {
+    height: 3px;
+    background-color: white;
+    z-index: 1000;
+}
+section {
+    padding: 50px 0px;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 30px;
+}
+section h3::after {
+    content: "";
+    border-bottom: 5px solid #c86b85;
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+}
+
+#aboutus, #team, #blog, #tempat {
+    text-align: center;
+}
+
+section p.ringkasan {
+    font-style: italic;
+    font-size: 18px;
+    color: #c86b85;
+}
+section .konten-isi p {
+     font-style: normal;
+}
+nav.putih {
+    background-color: white;
+}
+nav.putih .tombol-menu .garis {
+    background-color: #333;
+}
+
+nav.putih ul li a {
+    color: black;
+}
+
+
+nav .logo img.hitam {
+    display: none;
+}
+section.abuabu {
+    background-color: #f5f6f6;
+}
+.support, .tim, .blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.support h6, .tim h6 {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.support img {
+    width: 50px;
+}
+.support div, .tim div {
+    text-align: center;
+    width: 26%;
+}
+#support {
+    width: 100%;
+}
+
+section#gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+
+section#gallery div {
+    padding: 10px;
+}
+section#gallery div img {
+    height: 100px;
+    border-radius: 5px;
+}
+
+section#gallery div img:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+section.quote {
+    background-image: url(asset/background-bromo.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+}
+section.quote .layar-dalam {
+    display: inline;
+    background: url(asset/quote-icon.png) no-repeat;
+    padding: 40px;
+}
+/* Tempat */
+#tempat {
+    background-color: #f5f6f6;
+}
+
+
+/* Strat Card */
+
+.collection-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.collection-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    
+}
+
+.collection-card:hover {
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    transform: scale(1.0);
+}
+
+.image-box {
+    width: 310px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-box img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.image-box:hover img {
+    transform: scale(1.1);
+    width: 100%;
+}
+
+.collection-card h1 {
+    color: black;
+    font-weight: bold;
+    margin: 13px 0px 10px 0;
+    text-align: center;
+    margin-left: 0px;
+    font-size: 18px;
+}
+
+.spesies {
+    margin: 10px 0;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    
+}
+
+.tipe {
+    margin: 10px 10px 0;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+
+}
+
+.card-button {
+    background: #FDF7E4;
+    padding: 15px 80px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10px 20px 20px;
+    border: 0;
+    padding-right: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card-button:active {
+    position: relative;
+    box-shadow: none;
+    top: 6px;
+}
+
+.card-button a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+
+.card-button:hover {
+    background: #DED0B6;
+    color: rgb(132, 229, 184);
+    box-shadow: 0 0 5px black;
+    transition: all .6s;
+}
+
+.card-button:hover a{
+    color: black;
+    transition: all 1.2s;
+}
+
+/* Finish Card */
+
+.blog .area {
+    width: 47%;
+    box-shadow: 0px -10px 30px #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.blog div.area div {
+    width: 50%;
+}
+
+.blog .area .gambar {
+    border-radius: 5px 0px 0px 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.blog .area .text article {
+    padding: 40px;
+}
+
+.blog .area .text article h4 {
+    margin: 0;
+    margin-bottom: 10px;
+
+}
+
+.blog .area .text article a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.blog .area .text article a:hover {
+    color: #ccc;
+}
+
+footer {
+    padding: 50px 0px 50px 0px;
+    background-color: #343a40;
+    color: white;
+}
+
+footer .layar-dalam{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .layar-dalam div {
+    width: 20%;
+}
+footer .layar-dalam h5 {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer .layar-dalam .copyright {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #666;
+    text-align: center;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 991.98px) {
+    .layar-dalam {
+        width: 90%;
+    }
+    nav .menu ul {
+        display: none;
+        margin-top: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    nav .menu ul li {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        background-color: white;
+        line-height: 40px;
+    }
+    nav .menu ul li a {
+        color: black;
+    }
+    .tombol-menu {
+        display: flex;
+    }
+    .blog .area {
+        display: block;
+    }
+    .blog div.area div {
+        width: 100%;
+    }
+    .blog .area .gambar {
+        border-radius: 5px 5px 0px 0px;
+        height: 200px;
+    }
+    .support {
+        display: block;
+    }
+    .support div {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+}
